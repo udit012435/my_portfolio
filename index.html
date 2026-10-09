@@ -16,6 +16,39 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Projects pagination only */
+        .projects-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 30px;
+        }
+        .projects-pagination button {
+            min-width: 38px;
+            height: 38px;
+            padding: 0 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+            color: #333;
+            cursor: pointer;
+            font: inherit;
+            transition: all .2s ease;
+        }
+        .projects-pagination button.active,
+        .projects-pagination button:hover:not(:disabled) {
+            background: #222;
+            border-color: #222;
+            color: #fff;
+        }
+        .projects-pagination button:disabled {
+            opacity: .45;
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 
 <body>
@@ -84,14 +117,14 @@
                     <div class="info-item"><h6><i class="fas fa-user"></i> Name :</h6><p>Udit Narayan</p></div>
                     <div class="info-item"><h6><i class="fas fa-envelope"></i> Email :</h6><p>udit012435@gmail.com</p></div>
                     <div class="info-item"><h6><i class="fas fa-phone"></i> Phone :</h6><p>+91 88108 78157</p></div>
-                    <div class="info-item"><h6><i class="fas fa-map-marker-alt"></i> Location :</h6><p>Kanpur Nagar, UP</p></div>
+                    <div class="info-item"><h6><i class="fas fa-map-marker-alt"></i> Location :</h6><p>Naraina Vihar, Delhi</p></div>
                     <div class="info-item"><h6><i class="fas fa-graduation-cap"></i> Degree :</h6><p>B.Tech CSE</p></div>
                     <div class="info-item"><h6><i class="fas fa-language"></i> Languages :</h6><p>Hindi, English</p></div>
                 </div>
 
                 <div class="hero-btns">
                     <a href="tel:+918810878157" class="btn btn-primary">Contact Me</a>
-                    <a href="assets/Udit_Narayan_Resume.pdf" download class="btn btn-outline dark"><i class="fas fa-download"></i> Resume</a>
+                    <a href="assets/Udit_Narayan_Resume (3) (1).pdf" download class="btn btn-outline dark"><i class="fas fa-download"></i> Resume</a>
                 </div>
             </div>
         </div>
@@ -146,8 +179,8 @@
         <div class="numbers-overlay"></div>
         <div class="container numbers-grid">
             <div class="number-item"><span class="icon"><i class="fas fa-calendar-check"></i></span><h4><span class="count" data-target="25">0</span>+</h4><h6>Months Experience</h6></div>
-            <div class="number-item"><span class="icon"><i class="fas fa-diagram-project"></i></span><h4><span class="count" data-target="20">0</span>+</h4><h6>Projects Delivered</h6></div>
-            <div class="number-item"><span class="icon"><i class="fas fa-building"></i></span><h4><span class="count" data-target="4">0</span></h4><h6>Companies Worked</h6></div>
+            <div class="number-item"><span class="icon"><i class="fas fa-diagram-project"></i></span><h4><span class="count" data-target="23">0</span>+</h4><h6>Projects Delivered</h6></div>
+            <div class="number-item"><span class="icon"><i class="fas fa-building"></i></span><h4><span class="count" data-target="2">0</span></h4><h6>Companies Worked</h6></div>
             <div class="number-item"><span class="icon"><i class="fas fa-code"></i></span><h4><span class="count" data-target="21">0</span>+</h4><h6>Technologies</h6></div>
         </div>
     </div>
@@ -216,23 +249,31 @@
             </div>
 
             <div class="gallery">
-                <div class="gallery-item webapp"><a href="https://makaan24.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g1"><span class="pj-init">M24</span></div><div class="work-overlay"><h6>Makaan24</h6><span class="desc">Real-estate site with admin &amp; user dashboards</span><span class="tag">Web App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
-                <div class="gallery-item webapp"><a href="https://www.nextracommunications.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g3"><span class="pj-init">NC</span></div><div class="work-overlay"><h6>Nextra Communications</h6><span class="desc">WiFi / service platform with dashboards</span><span class="tag">Web App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
-                <div class="gallery-item webapp"><a href="https://chat-app-frontend-mocha-six.vercel.app/" target="_blank" rel="noopener"><div class="work"><div class="work-img g4"><span class="pj-init">CH</span></div><div class="work-overlay"><h6>Chatapp</h6><span class="desc">Chat website &amp; Personal project</span><span class="tag">Web App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
-                <div class="gallery-item webapp"><a href="https://mahadevevents.in/" target="_blank" rel="noopener"><div class="work"><div class="work-img g4"><span class="pj-init">ME</span></div><div class="work-overlay"><h6>Mahadev Events</h6><span class="desc">Event management &amp; booking portal</span><span class="tag">Web App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
-                <div class="gallery-item ecom"><a https:="https://phonak.hearingaidssolution.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">HA</span></div><div class="work-overlay"><h6>Hearing Aids</h6><span class="desc">E-commerce store for healthcare devices</span><span class="tag">E-Commerce</span></div></div></a></div>
-                <div class="gallery-item ecom"><div class="work"><div class="work-img g5"><span class="pj-init">DC</span></div><div class="work-overlay"><h6>DivaCos</h6><span class="desc">Cosmetics &amp; beauty products store</span><span class="tag">E-Commerce</span></div></div></div>
+                <div class="gallery-item webapp"><a href="https://makaan24.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g1"><span class="pj-init">Makaan24</span></div><div class="work-overlay"><h6>Makaan24</h6><span class="desc">Real-estate site</span><span class="tag">Web App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item webapp"><a href="https://lohamart.in/" target="_blank" rel="noopener"><div class="work"><div class="work-img g1"><span class="pj-init">Lohamart</span></div><div class="work-overlay"><h6>LohaMart</h6><span class="desc">Construction materials supplier</span><span class="tag">Web App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item webapp"><a href="https://www.nextracommunications.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g3"><span class="pj-init">Nextra</span></div><div class="work-overlay"><h6>Nextra Communications</h6><span class="desc">WiFi / service platform with dashboards</span><span class="tag">Web App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item agency"><a href="https://sitaramworldaviation.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">Sitaram World</span></div><div class="work-overlay"><h6>Sitaram world aviation</h6><span class="desc">Global travel and tour</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item webapp"><a href="https://chat-app-frontend-mocha-six.vercel.app/" target="_blank" rel="noopener"><div class="work"><div class="work-img g4"><span class="pj-init">Chatzio</span></div><div class="work-overlay"><h6>Chatapp</h6><span class="desc">Chat website &amp; Personal project</span><span class="tag">Web App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item webapp"><a href="https://mahadevevents.in/" target="_blank" rel="noopener"><div class="work"><div class="work-img g4"><span class="pj-init">M Events</span></div><div class="work-overlay"><h6>Mahadev Events</h6><span class="desc">Event management &amp; booking portal</span><span class="tag">Web App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item ecom"><a href="https://phonak.hearingaidssolution.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">Hearingaids</span></div><div class="work-overlay"><h6>Hearing Aids</h6><span class="desc">E-commerce store for healthcare devices</span><span class="tag">E-Commerce</span></div></div></a></div>
+                <div class="gallery-item ecom"><a href="https://growecom.in/" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">Grow E-com</span></div><div class="work-overlay"><h6>Grow Ecommerce</h6><span class="desc">E-commerce seller growth agency</span><span class="tag">Agency</span></div></div></a></div>
+                <div class="gallery-item agency"><a href="https://elitehairluxurysalon.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g4"><span class="pj-init">E Salon</span></div><div class="work-overlay"><h6>Elite Hair Luxury Salon</h6><span class="desc">Premium salon website with online booking</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item webapp"><a href="https://aceprep-frontend.vercel.app/" target="_blank" rel="noopener"><div class="work"><div class="work-img b1"><span class="pj-init">Aceprep</span></div><div class="work-overlay"><h6>AcePrep</h6><span class="desc">Exam preparation &amp; learning platform</span><span class="tag">Web App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item agency"><a href="https://mediumturquoise-jay-246688.hostingersite.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">R Salon</span></div><div class="work-overlay"><h6>Royals Royce Luxury Salon</h6><span class="desc">Luxury salon website with online booking</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item agency"><a href="https://vesicon2026.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">Vessicon</span></div><div class="work-overlay"><h6>Vessicon</h6><span class="desc">Medical research conference</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item agency"><a href="https://bharatpropack.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">B Propack</span></div><div class="work-overlay"><h6>Bharat Propack</h6><span class="desc">Packaging solutions manufacturer</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item agency"><a href="https://tarsierelite.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">Tarsierelite</span></div><div class="work-overlay"><h6>Tarsier Elite</h6><span class="desc">Online Coaching Platform</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item agency"><a href="https://beastnovels.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">Beast Novels</span></div><div class="work-overlay"><h6>Beast Novels</h6><span class="desc">Online Novels/Manga Reading Platform</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item agency"><a href="https://inpat.in" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">INPAT</span></div><div class="work-overlay"><h6>SIAM INPAT</h6><span class="desc">Moisture control packaging solutions</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item agency"><a href="https://dvacos.com" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">D'Vacos</span></div><div class="work-overlay"><h6>D'vacos</h6><span class="desc">Premium dermatology and skincare products</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item agency"><a href="https://rozine.in/" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">Rozine</span></div><div class="work-overlay"><h6>Rozine</h6><span class="desc">Premium ingredient supplier(B2B)</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item mobile"><a href="https://play.google.com/store/apps/details?id=com.luvmate.pupstin" target="_blank" rel="noopener"><div class="work"><div class="work-img g3"><span class="pj-init"><i class="fab fa-google-play"> Pupstine</i></span></div><div class="work-overlay"><h6>Pupstin</h6><span class="desc">Android app on Google Play</span><span class="tag">Mobile App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item mobile"><a href="https://play.google.com/store/apps/details?id=com.shadikey.shadikey" target="_blank" rel="noopener"><div class="work"><div class="work-img g5"><span class="pj-init"><i class="fab fa-google-play"> Shadikey</i></span></div><div class="work-overlay"><h6>Shadikey</h6><span class="desc">Android app on Google Play</span><span class="tag">Mobile App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
+                <div class="gallery-item mobile"><a href="https://play.google.com/store/apps/details?id=com.paceforce.paceforce" target="_blank" rel="noopener"><div class="work"><div class="work-img b3"><span class="pj-init"><i class="fab fa-google-play"> Paceforce</i></span></div><div class="work-overlay"><h6>Paceforce</h6><span class="desc">Android app on Google Play</span><span class="tag">Mobile App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
                 <div class="gallery-item ecom"><div class="work"><div class="work-img g6"><span class="pj-init">JK</span></div><div class="work-overlay"><h6>JK Sales</h6><span class="desc">Digital storefront for retail products</span><span class="tag">E-Commerce</span></div></div></div>
                 <div class="gallery-item agency"><div class="work"><div class="work-img b1"><span class="pj-init">AT</span></div><div class="work-overlay"><h6>Aitechdigi</h6><span class="desc">Tech-focused digital agency portfolio</span><span class="tag">Agency</span></div></div></div>
-                <div class="gallery-item agency"><a href="https://galacticgrid.vercel.app" target="_blank" rel="noopener"><div class="work"><div class="work-img b2"><span class="pj-init">GG</span></div><div class="work-overlay"><h6>Galactic Grid</h6><span class="desc">Modern digital agency website</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
-                <div class="gallery-item webapp"><div class="work"><div class="work-img b3"><span class="pj-init">CRM</span></div><div class="work-overlay"><h6>Admin &amp; Employee CRM</h6><span class="desc">Full-stack employee management system</span><span class="tag">Web App</span></div></div></div>
-                <div class="gallery-item agency"><a href="https://elitehairluxurysalon.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g4"><span class="pj-init">EH</span></div><div class="work-overlay"><h6>Elite Hair Luxury Salon</h6><span class="desc">Premium salon website with online booking</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
-                <div class="gallery-item webapp"><a href="https://aceprep-frontend.vercel.app/" target="_blank" rel="noopener"><div class="work"><div class="work-img b1"><span class="pj-init">AP</span></div><div class="work-overlay"><h6>AcePrep</h6><span class="desc">Exam preparation &amp; learning platform</span><span class="tag">Web App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
-                <div class="gallery-item agency"><a href="https://mediumturquoise-jay-246688.hostingersite.com/" target="_blank" rel="noopener"><div class="work"><div class="work-img g2"><span class="pj-init">RR</span></div><div class="work-overlay"><h6>Royals Royce Luxury Salon</h6><span class="desc">Luxury salon website with online booking</span><span class="tag">Agency <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
-                <div class="gallery-item mobile"><a href="https://play.google.com/store/apps/details?id=com.luvmate.pupstin" target="_blank" rel="noopener"><div class="work"><div class="work-img g3"><span class="pj-init"><i class="fab fa-google-play"></i></span></div><div class="work-overlay"><h6>Pupstin</h6><span class="desc">Android app on Google Play</span><span class="tag">Mobile App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
-                <div class="gallery-item mobile"><a href="https://play.google.com/store/apps/details?id=com.shadikey.shadikey" target="_blank" rel="noopener"><div class="work"><div class="work-img g5"><span class="pj-init"><i class="fab fa-google-play"></i></span></div><div class="work-overlay"><h6>Shadikey</h6><span class="desc">Android app on Google Play</span><span class="tag">Mobile App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
-                <div class="gallery-item mobile"><a href="https://play.google.com/store/apps/details?id=com.paceforce.paceforce" target="_blank" rel="noopener"><div class="work"><div class="work-img b3"><span class="pj-init"><i class="fab fa-google-play"></i></span></div><div class="work-overlay"><h6>Paceforce</h6><span class="desc">Android app on Google Play</span><span class="tag">Mobile App <i class="fas fa-arrow-up-right-from-square"></i></span></div></div></a></div>
             </div>
+            <div class="projects-pagination" id="projectsPagination" aria-label="Projects pagination"></div>
         </div>
     </section>
 
@@ -314,7 +355,7 @@
         <div class="footer-overlay"></div>
         <div class="container footer-grid">
             <div class="footer-item"><span class="icon"><i class="fas fa-mobile-alt"></i></span><h6>Phone</h6><p>+91 88108 78157</p></div>
-            <div class="footer-item"><span class="icon"><i class="fas fa-map"></i></span><h6>Address</h6><p>Kanpur Nagar, Uttar Pradesh</p></div>
+            <div class="footer-item"><span class="icon"><i class="fas fa-map"></i></span><h6>Home Town</h6><p>Kanpur Nagar, Uttar Pradesh</p></div>
             <div class="footer-item"><span class="icon"><i class="fas fa-envelope"></i></span><h6>Email</h6><p>udit012435@gmail.com</p></div>
         </div>
         <div class="sub-footer">
@@ -345,5 +386,92 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
+    <script>
+        // Projects pagination: show 6 projects per page while keeping existing filters intact.
+        document.addEventListener("DOMContentLoaded", function () {
+            const gallery = document.querySelector("#portfolio .gallery");
+            const pagination = document.getElementById("projectsPagination");
+            if (!gallery || !pagination) return;
+
+            const projects = Array.from(gallery.querySelectorAll(".gallery-item"));
+            const projectsPerPage = 6;
+            let currentPage = 1;
+
+            function getFilteredProjects() {
+                const activeFilter = document.querySelector("#portfolio .filter .active");
+                const filter = activeFilter ? activeFilter.dataset.filter : "all";
+                return projects.filter(project =>
+                    filter === "all" || project.classList.contains(filter)
+                );
+            }
+
+            function renderProjects() {
+                const filteredProjects = getFilteredProjects();
+                const totalPages = Math.max(1, Math.ceil(filteredProjects.length / projectsPerPage));
+                currentPage = Math.min(currentPage, totalPages);
+
+                projects.forEach(project => {
+                    project.style.display = "none";
+                });
+
+                filteredProjects.forEach((project, index) => {
+                    const isOnPage = index >= (currentPage - 1) * projectsPerPage &&
+                                     index < currentPage * projectsPerPage;
+                    project.style.display = isOnPage ? "" : "none";
+                });
+
+                pagination.innerHTML = "";
+                if (totalPages <= 1) return;
+
+                const previous = document.createElement("button");
+                previous.type = "button";
+                previous.textContent = "Previous";
+                previous.disabled = currentPage === 1;
+                previous.addEventListener("click", () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderProjects();
+                    }
+                });
+                pagination.appendChild(previous);
+
+                for (let page = 1; page <= totalPages; page++) {
+                    const button = document.createElement("button");
+                    button.type = "button";
+                    button.textContent = page;
+                    button.classList.toggle("active", page === currentPage);
+                    button.setAttribute("aria-label", "Page " + page);
+                    button.setAttribute("aria-current", page === currentPage ? "page" : "false");
+                    button.addEventListener("click", () => {
+                        currentPage = page;
+                        renderProjects();
+                    });
+                    pagination.appendChild(button);
+                }
+
+                const next = document.createElement("button");
+                next.type = "button";
+                next.textContent = "Next";
+                next.disabled = currentPage === totalPages;
+                next.addEventListener("click", () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderProjects();
+                    }
+                });
+                pagination.appendChild(next);
+            }
+
+            // Integrate with the existing category filter without changing its behavior.
+            document.querySelectorAll("#portfolio .filter [data-filter]").forEach(filterButton => {
+                filterButton.addEventListener("click", function () {
+                    currentPage = 1;
+                    window.setTimeout(renderProjects, 0);
+                });
+            });
+
+            renderProjects();
+        });
+    </script>
 </body>
 </html>
